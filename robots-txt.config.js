@@ -1,5 +1,5 @@
 module.exports = {
-  host: "https://www.example.com",
-  sitemap: "https://www.example.com/sitemap.xml",
+  host: "https://southocdigital.com",
+  sitemap: "https:/southocdigital.com/sitemap.xml",
   policy: [{ userAgent: "*", disallow: "/" }],
 };
