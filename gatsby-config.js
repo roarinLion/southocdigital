@@ -45,6 +45,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
+    "gatsby-plugin-sitemap",
 
     {
       resolve: "gatsby-plugin-manifest",
@@ -56,6 +57,23 @@ module.exports = {
         background_color: "#ffe491",
         theme_color: "#004ca3",
         icon: "src/favicon.png",
+      },
+    },
+    //this is a plugin to generate robots.txt file for seo purposes
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://southocdigital.com",
+        sitemap: "https://southocdigital.com/sitemap/sitemap-0.xml",
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["*"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", disallow: ["*"] }],
+          },
+        },
       },
     },
   ],
