@@ -1,8 +1,8 @@
 // support for .env, .env.development, and .env.production
-require("dotenv").config()
+require("dotenv").config();
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -25,6 +25,24 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
+    //google analytics integration for seo
+    
+     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "G-JMN9JS06P4",
+
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: true,
+
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+
+        // Defaults to gatsby-route-change
+        routeChangeEventName: "gatsby-route-change",
+        // Defaults to false
+        enableWebVitalsTracking: true,
+      },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -38,4 +56,4 @@ module.exports = {
       },
     },
   ],
-}
+};
