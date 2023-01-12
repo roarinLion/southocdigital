@@ -63,17 +63,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://southocdigital.com",
-        sitemap: "https://southocdigital.com/sitemap/sitemap-0.xml",
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: "*", disallow: ["*"] }],
-          },
-          production: {
-            policy: [{ userAgent: "*", disallow: ["*"] }],
-          },
-        },
+        configFile: "robots-txt.config.js",
       },
     },
   ],
