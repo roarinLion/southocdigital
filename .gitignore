@@ -4,3 +4,4 @@ yarn.lock
 .env.production
 .env.development
 public
+package-lock.json

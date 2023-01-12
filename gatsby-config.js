@@ -21,13 +21,9 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-vanilla-extract",
+
     //google analytics integration for seo
-    
-     {
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "G-JMN9JS06P4",
@@ -43,6 +39,13 @@ module.exports = {
         // Defaults to false
         enableWebVitalsTracking: true,
       },
+    },
+
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-image",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-vanilla-extract",
+
     {
       resolve: "gatsby-plugin-manifest",
       options: {
